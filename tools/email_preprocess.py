@@ -54,6 +54,7 @@ def preprocess(words_file = "../tools/word_data.pkl", authors_file="../tools/ema
     ### feature selection, because text is super high dimensional and 
     ### can be really computationally chewy as a result
     selector = SelectPercentile(f_classif, percentile=10)
+    selector = SelectPercentile(f_classif, percentile=10) # Modify percentile for data set size reduction
     # Select a lower percentile for Trees / Ensemble methods
     # 
     # selector = SelectPercentile(f_classif, percentile=1)

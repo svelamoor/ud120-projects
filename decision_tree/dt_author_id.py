@@ -37,6 +37,7 @@ pred = clf.predict(features_test)
 acc = accuracy_score(labels_test, pred)
 
 print "Accuracy ", acc
+
 #########################################################
 
 
