@@ -30,14 +30,30 @@ plt.show()
 
 ### your code here!  name your classifier object clf if you want the 
 ### visualization code (prettyPicture) to show you the decision boundary
-
-
-
-
-
-
-
-
+from sklearn.ensemble import RandomForestClassifier
+# from sklearn.ensemble import AdaboostClassifier
+from sklearn.svm import SVC
+from sklearn.gaussian_process import GaussianProcessClassifier
+from sklearn.metrics import accuracy_score
+# clf = RandomForestClassifier(n_estimators=10000)
+# clf = DecisionTreeClassifier()
+# clf = KNeighborsClassifier(3)
+# clf = SVC(kernel="linear", C=0.025)
+# clf = SVC(gamma=2, C=10000) # Winner of Accuracy predictions
+# clf = GaussianProcessClassifier()
+# clf = DecisionTreeClassifier(max_depth=5)
+# clf = RandomForestClassifier(max_depth=5, n_estimators=10, max_features=1)
+# clf = MLPClassifier(alpha=1)
+# clf = AdaBoostClassifier()
+# clf = GaussianNB()
+# clf = QuadraticDiscriminantAnalysis()
+from sklearn.metrics import accuracy_score
+clf = RandomForestClassifier(n_estimators=100)
+# clf = DecisionTreeClassifier()
+clf.fit(features_train, labels_train)
+# pred = clf.predict(features_test)
+# acc = accuracy_score(labels_test, pred)
+# print "Accuracy ", acc
 try:
     prettyPicture(clf, features_test, labels_test)
 except NameError:
